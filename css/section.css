@@ -1,0 +1,23 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.section__header {
+    color: rgba(124, 17, 17, 0.757);
+}
+
+.section__paragraph {
+    color: rgba(124, 17, 17, 0.757);
+}
+
+.section {
+    width: auto;
+    height: auto;
+    background-color:rgba(255, 255, 255, 0.339);
+    position: relative;
+    box-shadow: 2px;
+}

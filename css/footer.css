@@ -1,0 +1,29 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.section__header {
+    color: rgba(124, 17, 17, 0.757);
+}
+
+.footer {
+    width: auto;
+    height: auto;
+    background-color: rgba(226, 113, 113, 0.04);
+    position: relative;
+    box-shadow: 1px 0px 19px 0px ;
+}
+
+.footer__paragraph {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+.footer__strong {
+    color: white;
+}

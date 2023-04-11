@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/article.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <body class="body">
+        <header class="header">
+            <h1 class="header__importantHeader--homepage ">Kalkulator Walut</h1>
+        </header>
+        <section>
+            <div class="formContainer">
+                <form class="js-form form">
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">
+                            Kalkulator:
+                        </legend>
+                        <p>
+                            <label>
+                                <span class="form__labelText">
+                                    Kwota w PLN*:
+                                </span>
+                                <input placeholder="Wpisz kwotę" class="js-amount form__field " type="number"
+                                    step="0.01" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <span class="form__labelText">
+                                    Wymieniam na* :
+                                </span>
+                                <select class=" js-currency form__field">
+                                    <option value="THB">(THB) - Bat</option>
+                                    <option value="USD">(USD) - Dolar Amerykański</option>
+                                    <option value="AUD">(AUD) - Dolar Australijki</option>
+                                    <option value="HKD">(HKD) - Dolar Hongkongu</option>
+                                    <option value="CAD">(CAD) - Dolar Kanadyjski </option>
+                                    <option value="NZD">(NZD) - Dolar Nowozelandzki</option>
+                                    <option value="SGD">(SGD) - Dolar Singapurski</option>
+                                    <option value="EUR">(EUR) - Euro</option>
+                                    <option value="HUF">(HUF) - Forint Węgierski</option>
+                                    <option value="CHF">(CHF) - Frank Szwajcarski</option>
+                                    <option value="GBP">(GBP) - Funt Szterling</option>
+                                    <option value="UAH">(UAH) - Hrywna Ukraińska</option>
+                                    <option value="JPY">(JPY) - Jen Japoński</option>
+                                    <option value="CZK">(CZK) - Korona Czeska</option>
+                                    <option value="DKK">(DKK) - Korona Duńska</option>
+                                    <option value="ISK">(ISK) - Korona Islandzka</option>
+                                    <option value="NOK">(NOK) - Korona Norweska</option>
+                                    <option value="SEK">(SEK) - Korona Szwedzka</option>
+                                    <option value="RON">(RON) - Lej Rumuński</option>
+                                    <option value="BGN">(BGN) - Lew Bułgarski</option>
+                                    <option value="TRY">(TRY) - Lira Turecka</option>
+                                    <option value="ILS">(ILS) - Nowy Izraelski Szekel</option>
+                                    <option value="CLP">(CLP) - Peso Chilijskie</option>
+                                    <option value="PHP">(PHP) - Peso Filipińskie</option>
+                                    <option value="MXN">(MXN) - Peso Meksykańskie</option>
+                                    <option value="ZAR">(ZAR) - Rand RPA</option>
+                                    <option value="BRL">(BRL) - Real Brazylijski</option>
+                                    <option value="MYR">(MYR) - Ringgit Malezyjski</option>
+                                    <option value="IDR">(IDR) - Rupia Indonezyjska</option>
+                                    <option value="INR">(INR) - Rupia Indyjska</option>
+                                    <option value="KRW">(KRW) - Won Południowokoreański</option>
+                                    <option value="CNY">(CNY) - Yuan Renminbi (Chiny)</option>
+                                </select>
+                            </label>
+                        </p>
+                        <p>
+                            <button class="form__button ">Przelicz</button>
+                        </p>
+                        <p class="js-result form__result"></p>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <section class="section">
+            <article class="article">
+                <h2 class="article__header">Informacje o kalkulatorze</h2>
+                <p class="article__paragraph">
+                    Informacje o kursie walut są pobierane z głównej strony internetowej <strong
+                        class="article__strong">Narodowego Banku Polskiego (NBP)</strong>.
+                    Zawarte informacje, są aktualizowane <strong class="article__strong">raz dziennie o 24:00 i
+                        obliczane na
+                        podstawie średniej
+                        arytmetycznej</strong>, z poprzedniego dnia.
+                </p>
+                <p class="article__paragraph">
+                    Jeśli masz ochotę, kliknij w link i przeczytaj <strong class="article__strong"><a
+                            rel="noreferrer noopener" target="_blank"
+                            href="https://nbp.pl/statystyka-i-sprawozdawczosc/kursy/" title="strona NBP">więcej o
+                            kursach
+                            walut na głównej stronie NBP (otwiera sie w nowej karcie.) </a> </strong>
+
+                </p>
+                <p class="article__paragraph">
+                    Poniżej znajduję się również <strong class="article__strong">tabela</strong> z rozpisanymi kursami
+                    waluty z danego dnia.
+                </p>
+
+                <p class="article__paragraph--date">
+                    Kurs z dnia: <strong class="article__strong">20.03.2023</strong>
+                </p>
+            </article>
+        </section>
+        <section>
+            <div class="table__container">
+                <table class="table">
+                    <caption> Kurs z dnia: 20.03.2023</caption>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="col">Nazwa waluty</th>
+                        <th class="table__cell table__header" scope="col">Kod waluty</th>
+                        <th class="table__cell table__header" scope="col">Kurs średni</th>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Bat (Tajlandia)</th>
+                        <td class="table__cell">1 THB</td>
+                        <td class="table__cell">0,1294</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Dolar Amerykański</th>
+                        <td class="table__cell">1 USD</td>
+                        <td class="table__cell">4,4130</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Dolar Australijki</th>
+                        <td class="table__cell">1 AUD</td>
+                        <td class="table__cell">2,9466</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Dolar Hongkongu</th>
+                        <td class="table__cell">1 HKD</td>
+                        <td class="table__cell">0,5626</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Dolar Kanadyjski</th>
+                        <td class="table__cell">1 CAD</td>
+                        <td class="table__cell">3,2168</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Dolar Nowozelandzki</th>
+                        <td class="table__cell">1 NZD</td>
+                        <td class="table__cell">2,7521</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Dolar Singapurski</th>
+                        <td class="table__cell">1 SGD</td>
+                        <td class="table__cell">3,2890</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Euro</th>
+                        <td class="table__cell">1 EUR</td>
+                        <td class="table__cell">4,7109</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Forint Węgierski</th>
+                        <td class="table__cell">100 HUF</td>
+                        <td class="table__cell">1,1809</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Frank Szwajcarski</th>
+                        <td class="table__cell">1 CHF</td>
+                        <td class="table__cell">4,7477</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Funt Szterling</th>
+                        <td class="table__cell">1 GBP </td>
+                        <td class="table__cell">5,3808</td>
+
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Hrywna Ukraińska</th>
+                        <td class="table__cell">1 UAH</td>
+                        <td class="table__cell">0,1258</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Jen Japoński</th>
+                        <td class="table__cell">100 JPY</td>
+                        <td class="table__cell">3,3634</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Korona Czeska</th>
+                        <td class="table__cell">1 CZK</td>
+                        <td class="table__cell">0,1963</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Korona Duńska</th>
+                        <td class="table__cell">1 DKK</td>
+                        <td class="table__cell">0,6328</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Korona Islandzka</th>
+                        <td class="table__cell">100 ISK</td>
+                        <td class="table__cell">3,1469</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Korona Norweska</th>
+                        <td class="table__cell">1 NOK</td>
+                        <td class="table__cell">0,4119</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Korona Szwedzka</th>
+                        <td class="table__cell">1 SEK</td>
+                        <td class="table__cell">0,4205</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Lej Rumuński</th>
+                        <td class="table__cell">1 RON</td>
+                        <td class="table__cell">0,9572</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Lew Bułgarski</th>
+                        <td class="table__cell">1 BGN</td>
+                        <td class="table__cell">2,4086</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Lira Turecka</th>
+                        <td class="table__cell">1 TRY</td>
+                        <td class="table__cell">0,2322</td>
+
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Nowy Izraelski Szekel</th>
+                        <td class="table__cell">1 ILS</td>
+                        <td class="table__cell">1,2003</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Peso Chilijskie</th>
+                        <td class="table__cell">100 CLP</td>
+                        <td class="table__cell">0,5336</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Peso Filipińskie</th>
+                        <td class="table__cell">1 PHP</td>
+                        <td class="table__cell">0,0809</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Peso Meksykańskie</th>
+                        <td class="table__cell">1 MXN</td>
+                        <td class="table__cell">0,2321</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Rand RPA</th>
+                        <td class="table__cell">1 ZAR</td>
+                        <td class="table__cell">0,2384</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Real Brazylijski</th>
+                        <td class="table__cell">1 BRL</td>
+                        <td class="table__cell">0,8365</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Ringgit Malezyjski</th>
+                        <td class="table__cell">1 MYR</td>
+                        <td class="table__cell">0,9837</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Rupia Indonezyjska</th>
+                        <td class="table__cell">10000 IDR</td>
+                        <td class="table__cell">2,8731</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Rupia Indyjska</th>
+                        <td class="table__cell">100 INR</td>
+                        <td class="table__cell">5,3404</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Won Południowokoreański</th>
+                        <td class="table__cell">100 KRW</td>
+                        <td class="table__cell">0,3367</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">Yuan Renminbi (Chiny)</th>
+                        <td class="table__cell">1 CNY</td>
+                        <td class="table__cell">0,6408</td>
+                    </tr>
+                    <tr class="table__row">
+                        <th class="table__cell table__header" scope="row">SDR (MFW)</th>
+                        <td class="table__cell">1 XDR</td>
+                        <td class="table__cell">5,9184</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <footer class="footer">
+            <p class="footer__paragraph">
+                <strong class="footer__strong"> Informacje o kursie walut pochodzą z głównej strony NBP. </strong>
+            </p>
+
+        </footer>
+    </body>
+</body>
+
+</html>
