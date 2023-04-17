@@ -15,7 +15,7 @@ The form on the website **converts the Polish currency into all available curren
 The entire page is based on the exchange rate of **20/03/2023**.
 
 
-##   Technologies used::
+##   Technologies used:
 
 - HTML
 - JavaScript
