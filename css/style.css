@@ -22,3 +22,7 @@ html {
     background-position: center;
     background-attachment: fixed;
 }
+
+button {
+    cursor: pointer;
+}

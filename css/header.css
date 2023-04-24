@@ -1,12 +1,4 @@
-html {
-    box-sizing: border-box;
-}
-
-*, ::after, ::before {
-    box-sizing: inherit;
-}
-
-.header__importantHeader--homepage {
+.header__tittle {
     color:white;
     text-align: center;
     font-size: 60px;

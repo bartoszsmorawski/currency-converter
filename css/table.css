@@ -1,11 +1,3 @@
-html {
-    box-sizing: border-box;
-}
-
-*, ::after, ::before {
-    box-sizing: inherit;
-}
-
 .table__container {
     overflow-x: auto;
 }
@@ -17,23 +9,28 @@ html {
 }
 
 .table__cell {
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
+    color: rgb(0, 0, 0);
     padding: 20px;
     text-align: center;
     vertical-align: middle;
+    background-color: #ffffffb5;
 }
 
 .table__header {
-    background-color: #3266479b;
-    color: white;
+    background-color: #ffffffb5;
+    color: rgb(0, 0, 0);
     font-weight: normal;
 }
 
 .table__row:nth-child(even) {
-    background-color: #3f8059;
+    background-color: #ffffffa5;
 }
 
 .table__row:hover {
-    background-color: #3f805971;
+    background-color: #ffffff71;
 }
 
+.caption__table {
+    font-size: 27px;
+}
